@@ -1,0 +1,13 @@
+name: 'Custom GitHub Action'
+description: 'A GitHub Action that check typo with proselint'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  
+    - name: Install proselint
+      run: pip install proselint
+      shell: bash
+    - run: proselint *.md
