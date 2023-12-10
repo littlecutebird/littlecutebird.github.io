@@ -11,3 +11,4 @@ runs:
       run: pip install proselint
       shell: bash
     - run: proselint *.md
+      shell: bash
